@@ -20,35 +20,30 @@ body {
   color: #4caf50;
   text-align: center;
   font-size: 2em;
-  margin-bottom: 30px;
+  margin-bottom: 0.5em;
   margin-left: 20px;
+  margin-top: 1.5em;
+  font-weight: 600;
 }
 
 h1 {
-  font-size: 1.5em;
   margin-bottom: 10px;
   color: #333;
   margin-left: 20px;
-  
 }
 
 input[type="text"] {
   width: calc(30% - 1px);
   padding: 8px;
   margin-bottom: 10px;
-  
   border-radius: 4px;
-  
   margin-left: 20px;
   border: 0;
   border-bottom: 2px solid grey;
   outline: 0;
   font-size: 1.3rem;
-  
   padding: 7px 0;
   background: transparent;
-  
-  
 }
 
 button {
@@ -77,10 +72,142 @@ button:hover {
   margin-top: 20px;
   margin-left: 20px;
 }
-.social{
+/* .social{
   margin-left: 20px;
   margin-right: -12px;
   margin-bottom: -23px;
-  
+} */
+.form{
+  border-top: 1px groove rgba(0, 0, 0, 0.103);
+}
+.skills p{
+  margin-bottom: 10px;
+  border-radius: 4px;
+  margin-left: 20px;
+  border: 0;
+  border-bottom: 2px solid grey;
+  outline: 0;
+  font-size: 1.3rem;
+  padding: 7px 0;
+  background: transparent;
+}
 
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+.checkbox-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em; 
+  margin-top: 1em;
+}
+input[type="checkbox"] {
+  margin-right: 5px; 
+  margin-bottom: 1em;
+}
+label {
+  display: flex;
+  align-items: center;
+}
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 1.5em;
+  height: 1.5em; 
+  border: 2px solid #000000;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+input[type="checkbox"]:checked::before {
+  content: '';
+  position: absolute;
+  top: 0.3em; 
+  left: 0.3em; 
+  width: 0.6em;
+  height: 0.6em; 
+  background-color: purple; 
+  transition: background-color 0.3s;
+}
+input[type="checkbox"]:hover {
+  background-color: #afafaf; 
+}
+.option{
+  width: 10em;
+  max-width: 10em;
+}
+.blankoption{
+  width: 10em;
+  max-width: 10em;
+}
+.left{
+  width: 40%;
+  margin-left: 10%;
+  margin-right: 5%;
+}
+.right{
+  width: 40%;
+  margin-right: 10%;
+  margin-left: 5%;
+}
+
+.social{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: left;
+}
+.addon{
+font-size: 23px;
+line-height: 2em;
+}
+
+/* change if needed */
+.skills button{
+  height:3em;
+  padding: 7px;
+  margin-top: 1em;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+.social label{
+  display: flex;
+  flex-direction: row;
+  min-width: 40em;
+  width: 200%;
+}
+.option {
+  position: relative;
+  display: inline-block;
+}
+.option .tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 20px;
+  margin-left: 2em;
+  top: 1em;
+}
+.option .tooltip-text::after {
+  display: none;
+}
+.option:hover .tooltip-text {
+  min-width: 100em;
+  visibility: visible;
+  opacity: 1;
 }

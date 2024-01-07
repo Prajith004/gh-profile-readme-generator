@@ -3,85 +3,186 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-
-<link rel="stylesheet" href="style.css">
-<body>
-  <h1 class="title"><u> Profile README Generator<br></u></h1><br><br>
-  <h1>Title</h1>
-  
-  <input type="text" value="Hi 👋, I'm" id="hi">
-  <input type="text" placeholder="Enter Your Name" id="name"><Br><Br>
-  <h1>Subtitle</h1>
-  <input type="text" value="A passionate frontend developer from India" id="subtitle"><br><br>
-  <h1>Work</h1>
-  <!--working-->
-  <input type="text" value="🔭 I’m currently working on" id="working">
-  <input type="text" placeholder="project name" id="working.projectname">
-  <input type="text" placeholder="project link" id="working.projectlink"><br>
-<!--collaborate-->
-  <input type="text" value="👯 I’m looking to collaborate on" id="collaborate">
-  <input type="text" placeholder="project name" id="collaborate.projectname">
-  <input type="text" placeholder="project link" id="collaborate.projectlink"><br>
-<!--looking-->
-  <input type="text" value="🤝 I’m looking for help with" id="looking">
-  <input type="text" placeholder="project name" id="looking.projectname">
-  <input type="text" placeholder="project link" id="looking.projectlink"><br>
-<!--learning-->
-  <input type="text" value="🌱 I’m currently learning" id="learning">
-  <input type="text" placeholder="Frameworks,courses etc." id="learning.placeholder"><br>
-
-<!--ask-->
-  <input type="text" value="💬 Ask me about" id="ask">
-  <input type="text" placeholder="react,vue and gsap" id="ask.placeholder"><br>
-<!--reach-->
-  <input type="text" value="📫 How to reach me" id="reach">
-  <input type="text" placeholder="example@gmail.com" id="reach.placeholder"><br>
-<!--projects-->
-  <input type="text" value="👨‍💻 All of my projects are available at" id="projects">
-  <input type="text" placeholder="protfolio link" id="projects.placeholder"><br>
-<!--articles-->
-  <input type="text" value="📝 I regularly write articles on" id="articles">
-  <input type="text" placeholder="blog link" id="articles.placeholder"><br>
-<!--resume-->
-  <input type="text" value="📄 Know about my experiences" id="resume">
-  <input type="text" placeholder="resume link" id="resume.placeholder"><br>
-<!--funfact-->
-  <input type="text" value="⚡ Fun fact" id="funfact">
-  <input type="text" placeholder="I think I am funny" id="funfact.placeholder"><br>
-  <br><br>
-  <h1>Social</h1><br>
-  <!--social-->
- <img src="youtube.svg" width="30" height="60" fill="currentColor" class="social" viewBox="0 0 0 0"> 
- <input type="text" placeholder="youtube channel name" id="youtube"><br>
-
- <img src="instagram.svg" width="30" height="60" fill="currentColor" class="social" viewBox="0 0 0 0"> 
- <input type="text" placeholder="instagram username" id="instagram"><br>
-
- <img src="linkedin.svg" width="30" height="60" fill="currentColor" class="social" viewBox="0 0 0 0"> 
- <input type="text" placeholder="linkedin username" id="linkedin"><br>
-
-
-
-
-
-
-  
-
-
-
-
-
-
- <br> <button onclick="displayHTML()">Generate README</button>
-
-  <textarea id="displaycode" readonly class="textarea"></textarea>
-
-
-
-
-
+  <link rel="stylesheet" href="stylehome.css">
+  <title>Home</title>
   <script src="script.js"></script>
+  <link rel="icon" href="/logo/titlelogo.png" type="image/x-icon">
+</head>
+<body>
+  <div class="lines">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="top"></div>
+    <div class="main" style="display: flex; flex-direction: row;">
+      <div class="main1" style="width: 65%; left: 0%;">
+        <p class="head1">
+          Best Profile <br>
+          Generator
+        </p>
+        <form action="main.html" id="usernameForm" onsubmit="getStats(event)">
+          <input type="text" class="input" placeholder="Enter Your GitHub Username" id="usernameInput" pattern="[a-zA-Z0-9_\s]+" required>
+          <button type="submit" class="submit">></button>
+        </form>
+        <div id="displaycode"></div>
+        <script>
+          document.getElementById('usernameForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('usernameInput').value.trim();
+            // Encode the username and redirect to the other HTML file with the username as a query parameter
+            const encodedUsername = encodeURIComponent(username);
+            window.location.href = `main.html?username=${encodedUsername}`;
+          });
+        </script>
+    </div>
+      <div class="main2" style="width: 35%; right: 5%; text-align: center; margin-top: 3em;"></div>
+    </div>
+    <div class="changingtext">
+      Create &nbsp; <b><div id="word" class="word-animation"></div></b> &nbsp; Profile
+    </div>
+  </div>
+  <center>
+    <div class="contents">
+      <h1>FEATURES</h1>
+      <h2>We got everything that you need !</h2>
+      <pre>
+        Create your perfect GitHub Profile ReadMe in the best possible way.
+        Lots of features and tools included, all for free !
+      </pre>
+      <div class="split left">
+        <h3>Lightening fast Profile Creation</h3>
+        <p>
+          Create your Profile ReadMe in just a few clicks! On average, it takes less than
+          one minute to create a perfect Profile ReadMe using GPRM.
+        </p>
+
+        <h3>Flex Your GitHub Stats</h3>
+        <p>
+          Be Honest, everyone loves to flex their achievements. With tools such as ReadMe
+          Stats, Most Used Languages, Streak Stats, you can show your achievements.
+        </p>
+
+        <h3>Visitor Counter</h3>
+        <p>
+          With the use of Visitors Counter you can see how many people viewed your profile,
+          this gives you an idea about how popular you are on GitHub.
+        </p>
+
+        <h3>Fun Components</h3>
+        <p>
+          If fun is required everywhere, how can it be missing from your profile? Now, You
+          can cheer up other people by adding Random Memes and Quotes to your profile.
+        </p>
+      </div>
+      <div class="split right">
+        <h3>Add all Social Links</h3>
+        <p>
+          We have added an option to add your Social Links to increase your reach and
+          promote your works in one place.
+        </p>
+
+        <h3>Show Your Tech Stack</h3>
+        <p>
+          Select from over 300+ tech options and show your tech stack to everyone. Let
+          them know what makes you awesome.
+        </p>
+
+        <h3>Let people help you with Donations</h3>
+        <p>
+          No matter what your aim is, money is required at some point to boost the
+          process for getting closer to your aim. We give you an option to add Donation Links
+          directly into your profile so that people can help you by donating.
+        </p>
+
+        <h3>GitHub Trophies</h3>
+        <p>
+          Got any trophies/medals but oops! how can you show them on your profile? Don't
+          worry, GitHub Trophies are the virtual trophies for you. Showcase them by
+          adding them to your profile.
+        </p>
+      </div>
+      <div class="social-links"></div>
+      <div class="faq">
+        <h2>Frequently-asked questions</h2>
+        <h3>Do I need to fill all sections ?</h3>
+        <p>
+          Not at all, only GitHub username is mandatory, all the other sections
+          are optional. It's all your choice; you can fill them depending on
+          your requirement, you have all the options for customization.
+        </p>
+
+        <h3>Do I need to know Markdown or HTML for using this website?</h3>
+        <p>
+          This is a complete No-Code solution, so you don't need any coding
+          experience. You just have to fill sections, and we will create a perfect
+          GitHub Profile ReadMe for you for free! Sounds cool? Try now!
+        </p>
+
+        <h3>How to change GitHub ReadMe?</h3>
+        <p>
+          If you already have your personal repository
+          (personal repository name is the same as your GitHub username)
+          then you can copy-paste the code generated from GPRM into your
+          ReadMe file. If you don't have your personal repository then
+          follow this:
+          <br>
+          <b>Step 1 :</b> Go to https://github.com/new and enter the same
+          name as your GitHub username into the Repository
+          name field.<br>
+          <b>Step 2 :</b> Leave the repo as a Public repo (by default).<br>
+          <b>Step 3 :</b> Also, make sure to initialize it with a README to get started.<br>
+          <b>Step 4 :</b> Paste the code generated from this website inside your ReadMe file.<br>
+          <b>Step 5 :</b> Commit the changes to add a ReadMe to your GitHub Account.<br>
+        </p>
+      </div>
+      <div class="credits">
+        <h2>Credits</h2>
+        <p>We believe in giving credit where it's due. To all the OG creators,
+          we see you and #thank you for creating these awesome tools!
+        </p>
+        <div class="people">
+          <div class="person"><img src="insta.jpeg"><br>NAME <br> abcd</div>
+          <div class="person"><img src="github.png"><br>NAME <br> abcd</div>
+          <div class="person"><img src="twitter.png"><br>NAME <br> abcd</div>
+        </div>
+      </div>
+    </div>
+  </center>
+  </div>
+  </div>
+  <center>
+    <footer>
+      <div class="links">
+        <a href="#"><img src="twitter.png"></a>
+        <a href="#"><img src="github.png"></a>
+        <a href="#"><img src="linkedin.png"></a>
+        <a href="#"><img src="insta.jpeg"></a>
+      </div>
+      <p> &#9993; prajith@gmail.com </p>
+      <p>&lt;/&gt; & crafted with &#128155; Prajith Shetty</p>
+    </footer>
+  </center>
+  <script>
+    const words = [
+      { text: 'Modern', color: '#6ed8d8' },
+      { text: 'Interactive', color: ' #fff897' },
+      { text: 'Perfect', color: '#a7fad7' },
+      { text: 'Beautiful', color: '#f6c6f8' }
+    ];
+
+    const wordElement = document.getElementById('word');
+    let index = 0;
+
+    function changeWord() {
+      const { text, color } = words[index];
+      wordElement.textContent = text;
+      wordElement.style.color = color;
+      wordElement.style.borderColor = color;
+      index = (index + 1) % words.length;
+      setTimeout(changeWord, 3000);
+    }
+
+    changeWord();
+  </script>
 </body>
 </html>
